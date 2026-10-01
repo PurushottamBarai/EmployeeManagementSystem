@@ -1,0 +1,17 @@
+target/
+.git/
+.gitignore
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/
+*.log
+application-local.properties
+.env
+*.pdf
+README.md
+postman/
+Procfile
+system.properties

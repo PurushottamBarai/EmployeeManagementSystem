@@ -184,3 +184,15 @@ Configure the following environment variables in your cloud platform settings:
 | `DB_PASSWORD` | Database password | `<your-db-password>` |
 
 *Note: The platform automatically manages `PORT`, and Java 17 is declared via `system.properties`.*
+
+---
+
+## Deployment (Render with Docker)
+This application includes a multi-stage `Dockerfile` and can be deployed directly as a Web Service on Render:
+1. Connect your repository to Render and choose **Docker** as the Environment.
+2. In the Render Dashboard under **Environment Variables**, add:
+   - `DB_URL`: JDBC connection string for your cloud database (e.g. TiDB Cloud Serverless or Aiven MySQL)
+   - `DB_USER`: Database user
+   - `DB_PASSWORD`: Database password
+3. Render automatically sets and injects `PORT`, which the application binds to via `${PORT:8080}`.
+
