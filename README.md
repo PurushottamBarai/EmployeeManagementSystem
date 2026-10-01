@@ -50,6 +50,20 @@ The application starts on `http://localhost:8080`.
 
 ---
 
+## Frontend Web UI
+A lightweight, responsive web dashboard is built into the application and accessible directly at:
+```
+http://localhost:8080/
+```
+**Features:**
+- Add employee form with real-time field validation.
+- Table listing all employees with current salaries.
+- Edit employee with automatic form pre-fill and PUT update.
+- Delete employee with confirmation dialog.
+- Informative alert banner presenting exact API validation and error messages (`400`, `404`, `409`).
+
+---
+
 ## API Endpoints
 
 | Method | Endpoint | Description | Success Status | Error Statuses |
