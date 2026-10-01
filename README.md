@@ -168,3 +168,19 @@ employee-management/
 ## Postman Collection
 A complete Postman collection covering all positive and negative test cases is located at:
 `postman/employee-management.postman_collection.json`
+
+---
+
+## Deployment (Cloud & TiDB Cloud)
+This application is configured for deployment with TiDB Cloud Serverless (MySQL-compatible) or any cloud MySQL service.
+
+### Required Config Vars (Environment Variables):
+Configure the following environment variables in your cloud platform settings:
+
+| Variable | Description | Example / Format |
+|---|---|---|
+| `DB_URL` | Cloud MySQL / TiDB JDBC URL | `jdbc:mysql://<host>:4000/ems_db?sslMode=VERIFY_IDENTITY` |
+| `DB_USER` | Database username | `<cluster_id>.root` |
+| `DB_PASSWORD` | Database password | `<your-db-password>` |
+
+*Note: The platform automatically manages `PORT`, and Java 17 is declared via `system.properties`.*
